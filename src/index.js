@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app/layout/App";
+import ScrollTop from "./app/util/ScrollToTop";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
@@ -13,7 +14,9 @@ let render = () => {
   ReactDOM.render(
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <ScrollTop>
+          <App />
+        </ScrollTop>
       </BrowserRouter>
     </Provider>,
     document.getElementById("root")
